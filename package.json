@@ -1,0 +1,27 @@
+{
+  "name": "@slikts/typescript-library-boilerplate",
+  "version": "1.0.0",
+  "description": "Modern TypeScript library boilerplate",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "boilerplate",
+    "starter",
+    "skeleton"
+  ],
+  "author": "slikts <dabas@untu.ms>",
+  "license": "ISC",
+  "files": [
+    "/lib"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
+    "typescript": "^3.5.3"
+  }
+}
