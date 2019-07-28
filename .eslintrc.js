@@ -10,4 +10,13 @@ module.exports = {
   env: {
     es6: true,
   },
+  overrides: [
+    {
+      files: ['**/*.spec.{js,jsx,ts,tsx}'],
+      env: {
+        jest: true,
+      },
+      globals: {},
+    },
+  ],
 };
