@@ -1,5 +1,7 @@
+import example from './example';
+
 describe('foo', () => {
   it('bar', () => {
-    expect(1).toBe(1);
+    expect(example()).toBe(1);
   });
 });
