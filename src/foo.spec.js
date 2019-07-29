@@ -1,7 +1,7 @@
 import foo from './foo';
 
 describe('foo', () => {
-  it('bar', () => {
-    expect(foo()).toBe(1);
+  it('bar', async () => {
+    expect(await foo()).toBe(1);
   });
 });

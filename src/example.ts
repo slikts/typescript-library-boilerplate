@@ -1,1 +1,3 @@
-export default () => 1;
+const hello = () => 1;
+
+export default () => hello();

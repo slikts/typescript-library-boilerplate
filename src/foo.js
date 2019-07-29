@@ -1,1 +1,3 @@
-export default () => 1;
+const hello = async () => 1;
+
+export default () => hello();

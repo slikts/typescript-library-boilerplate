@@ -7,9 +7,10 @@
   "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "build": "npm run clean && rollup -c",
+    "dev": "npm run clean && rollup -c -w",
     "test": "jest",
+    "clean": "rimraf lib",
     "test:watch": "npm test -- --watch",
     "postversion": "git push && git push --tags",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",

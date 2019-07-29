@@ -24,6 +24,7 @@ module.exports = {
       files: ['src/**/*.spec.{ts,tsx}'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
+        // TODO:
         // project: './tsconfig.json',
         ecmaFeatures: {
           jsx: true,
@@ -40,6 +41,7 @@ module.exports = {
   "settings": {
     "import/resolver": {
       "node": {
+        "paths": ["src"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
