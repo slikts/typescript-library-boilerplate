@@ -1,8 +1,10 @@
 const prettierConfig = require('./.prettierrc.json');
 
+const plugins = ['prettier'];
+
 module.exports = {
   extends: ['eslint-config-airbnb-base', 'eslint-config-prettier'].map(require.resolve),
-  plugins: ['prettier'],
+  plugins,
   rules: {
     'func-names': [1, 'as-needed'],
     'prettier/prettier': ['warn', prettierConfig],
@@ -12,11 +14,34 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.spec.{js,jsx,ts,tsx}'],
+      files: ['src/**/*.spec.{js,jsx,ts,tsx}'],
       env: {
         jest: true,
       },
       globals: {},
     },
+    {
+      files: ['src/**/*.spec.{ts,tsx}'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        // project: './tsconfig.json',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      plugins: [
+        ...plugins,
+        '@typescript-eslint',
+      ],
+      rules: {
+      }
+    }
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
 };
